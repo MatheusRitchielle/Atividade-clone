@@ -21,7 +21,7 @@ const Login = ({ navigation }) => {
                     <TextLink >Esqueceu a sua senha? Clique aqui!</TextLink>
                 </SecondaryButton>
             </WrapperTextInfo>
-            <ButtonPrimary onPress={() => {navigation.navigate("CreatePassword")}}>
+            <ButtonPrimary onPress={() => {navigation.navigate("TabNavigator")}}>
                 <TextButton>Entrar</TextButton>
             </ButtonPrimary>
             <WrapperTextInfo>

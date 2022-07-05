@@ -7,10 +7,12 @@ import CreatePassword from "../Screens/CreatePassword";
 import ChangedPassword from "../Screens/ChangedPassword";
 import RegisteredUser from "../Screens/RegisteredUser";
 import Register from "../Screens/Register";
+import TabNavigator from '../TabNavigator/index';
 
 const Stack = createNativeStackNavigator();
 
 const Routes = () => {
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -25,14 +27,15 @@ const Routes = () => {
           name="PasswordRecovery"
           component={PasswordRecovery}
           options={{
-            headerShown: false
+            title: false
           }}
         />
         <Stack.Screen
           name="CreatePassword"
           component={CreatePassword}
           options={{
-            headerShown: false
+            headerTransparent: true,
+            title: false,
           }}
         />
         <Stack.Screen
@@ -53,7 +56,18 @@ const Routes = () => {
           name="Register"
           component={Register}
           options={{
-            title:"Cadastro"
+            headerTransparent: true,
+            title: "Cadastro",
+            headerTitleAlign: "center"
+          }}
+        />
+        <Stack.Screen
+          name="TabNavigator"
+          component={TabNavigator}
+          options={{
+            headerTransparent: true,
+            title: "Marketplace",
+            headerTitleAlign: "center"
           }}
         />
       </Stack.Navigator>
@@ -62,3 +76,4 @@ const Routes = () => {
 };
 
 export default Routes;
+
