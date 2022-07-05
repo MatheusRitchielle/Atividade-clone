@@ -8,6 +8,7 @@ import ChangedPassword from "../Screens/ChangedPassword";
 import RegisteredUser from "../Screens/RegisteredUser";
 import Register from "../Screens/Register";
 import TabNavigator from '../TabNavigator/index';
+import SuccessfulPurchase from "../Screens/SuccessfulPurchase";
 
 const Stack = createNativeStackNavigator();
 
@@ -68,6 +69,15 @@ const Routes = () => {
           options={{
             headerTransparent: true,
             title: false
+          }}
+        />
+        <Stack.Screen
+          name="SuccessfulPurchase"
+          component={SuccessfulPurchase}
+          options={{
+            headerTransparent: true,
+            title: false,
+            headerShown: false
           }}
         />
       </Stack.Navigator>

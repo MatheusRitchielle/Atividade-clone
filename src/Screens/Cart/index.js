@@ -1,42 +1,49 @@
 import React from "react";
 import { FlatList, View } from "react-native";
-import { CardGeneric, ContainerFavoritos, FotoEstilizada, Shadow, Title } from "./styles";
+import { CardGeneric, ContainerFavoritos, Shadow, Title, Column, Total } from "./styles";
 import { TextLink } from './../Login/styles';
 import Gradient from './../../components/Gradient/index';
+import { ButtonPrimary } from './../../components/CustomButton/styles';
 
 const Lista = [
     {
         id: 1,
-        produto: "Produto 2",
-        preco: "50,00",
-        estoque: 1,
-        foto: "https://decisaosistemas.com.br/wp-content/uploads/2021/06/tecnologia-na-gestao-das-empresas.jpg"
+        produto: "Produto 1",
+        preco: 25.00,
+        estoque: 2,
     },
     {
         id: 2,
-        produto: "Produto 5",
-        preco: "40,00",
-        estoque: 20,
-        foto: "https://img.olhardigital.com.br/wp-content/uploads/2021/04/Tecnologia-da-informacao.jpg"
+        produto: "Produto 4",
+        preco: 100.00,
+        estoque: 1,
     },
     {
         id: 3,
         produto: "Produto 6",
-        preco: "70,00",
-        estoque: 8,
-        foto: "https://universo.uniateneu.edu.br/wp-content/uploads/2022/05/Profissional-de-TI.jpeg"
+        preco: 40,
+        estoque: 1,
     }
 ];
 
-const Item = ({ produto, preco, estoque, foto }) => (
-    <View>
-        <TextLink>{produto}</TextLink>
-        <TextLink>Preço R$ {preco}</TextLink>
-        <TextLink>{estoque} unidades em estoque</TextLink>
+const Item = ({ produto, preco, estoque }) => (
+    <View style={{ flexDirection: "row" }}>
+        <Column>
+            <TextLink>{produto}</TextLink>
+        </Column>
+        <Column>
+            <TextLink>{estoque}</TextLink>
+        </Column>
+        <Column>
+            <TextLink>R$ {preco}</TextLink>
+        </Column>
+        <Column>
+            <TextLink>R$ {preco * estoque}</TextLink>
+        </Column>
     </View>
 );
 
-const Cart = () => {
+const Cart = ({ navigation }) => {
     const itemRenderizado = ({ item }) => (
         <Item produto={item.produto} preco={item.preco} estoque={item.estoque} />
     );
@@ -48,19 +55,42 @@ const Cart = () => {
                 <Shadow>
                     <CardGeneric>
                         <Title>
-                            <TextLink>Produto</TextLink>
-                            <TextLink>Quantidade</TextLink>
-                            <TextLink>Preço Unitário</TextLink>
-                            <TextLink>Total</TextLink>
+                            <Column>
+                                <TextLink>Produto</TextLink>
+                            </Column>
+                            <Column>
+                                <TextLink>Quantidade</TextLink>
+                            </Column>
+                            <Column>
+                                <TextLink>Preço Unitário</TextLink>
+                            </Column>
+                            <Column>
+                                <TextLink>Total</TextLink>
+                            </Column>
                         </Title>
                         <FlatList
                             data={Lista}
                             renderItem={itemRenderizado}
                             keyExtractor={(item) => item.id}
-                            numColumns={4}
                         />
+                        <Total >
+                            <TextLink>Total da compra</TextLink>
+                            <TextLink>R$</TextLink>
+                        </Total>
+                        <Total >
+                            <TextLink>Data da compra</TextLink>
+                            <TextLink>today.toLocaleDateString();</TextLink>
+                        </Total>
                     </CardGeneric>
                 </Shadow>
+                <Total>
+                    <ButtonPrimary onPress={() => { navigation.navigate("InitialPage") }}>
+                        <TextLink>ADICIONAR MAIS ITENS</TextLink>
+                    </ButtonPrimary>
+                    <ButtonPrimary onPress={() => { navigation.navigate("SuccessfulPurchase") }}>
+                        <TextLink>FECHAR PEDIDO</TextLink>
+                    </ButtonPrimary>
+                </Total>
                 <Gradient position='bottom' />
             </ContainerFavoritos>
         </>
