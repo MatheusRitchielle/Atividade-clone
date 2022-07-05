@@ -14,8 +14,9 @@ const Stack = createNativeStackNavigator();
 const Routes = () => {
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
+    <NavigationContainer >
+      {/* <Stack.Navigator initialRouteName="Login"> */}
+      <Stack.Navigator initialRouteName="TabNavigator">
         <Stack.Screen
           name="Login"
           component={Login}
@@ -66,8 +67,7 @@ const Routes = () => {
           component={TabNavigator}
           options={{
             headerTransparent: true,
-            title: "Marketplace",
-            headerTitleAlign: "center"
+            title: false
           }}
         />
       </Stack.Navigator>
