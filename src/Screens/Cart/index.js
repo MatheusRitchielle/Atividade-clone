@@ -4,6 +4,7 @@ import { CardGeneric, ContainerFavoritos, Shadow, Title, Column, Total } from ".
 import { TextLink } from './../Login/styles';
 import Gradient from './../../components/Gradient/index';
 import { ButtonPrimary } from './../../components/CustomButton/styles';
+import { MaterialIcons } from '@expo/vector-icons';
 
 const Lista = [
     {
@@ -32,7 +33,15 @@ const Item = ({ produto, preco, estoque }) => (
             <TextLink>{produto}</TextLink>
         </Column>
         <Column>
-            <TextLink>{estoque}</TextLink>
+            <TextLink>
+                <MaterialIcons
+                    style={{ padding: "5px"}}
+                    name="remove-circle-outline" size={10} color="#120a8f" />
+                {estoque}
+                <MaterialIcons
+                    style={{ padding: "5px"}}
+                    name="add-circle-outline" size={10} color="#120a8f" />
+            </TextLink>
         </Column>
         <Column>
             <TextLink>R$ {preco}</TextLink>

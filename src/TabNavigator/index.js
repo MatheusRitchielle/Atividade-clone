@@ -4,13 +4,14 @@ import { Entypo } from "@expo/vector-icons";
 import InitialPage from "../Screens/InitialPage";
 import Favorites from "../Screens/Favorites";
 import Cart from "../Screens/Cart"
+import Product from "../Screens/Product";
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
     return (
         <Tab.Navigator
-            initialRouteName="Cart"
+            // initialRouteName="Product"
 
             screenOptions={{
                 tabBarStyle: {
@@ -35,6 +36,18 @@ const TabNavigator = () => {
                 }}
             />
             <Tab.Screen
+                name="Product"
+                component={Product}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <Entypo name="shopping-bag" size={size} color={color} />
+                    ),
+                    title: "Produtos",
+                    headerTitleAlign: "center",
+                    headerTransparent: true
+                }}
+            />
+            <Tab.Screen
                 name="Favorites"
                 component={Favorites}
                 options={{
@@ -46,7 +59,7 @@ const TabNavigator = () => {
                     headerTransparent: true
                 }}
             />
-      <Tab.Screen
+            <Tab.Screen
                 name="Cart"
                 component={Cart}
                 options={{
