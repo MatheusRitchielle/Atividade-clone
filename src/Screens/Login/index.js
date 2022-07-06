@@ -1,10 +1,13 @@
-import { Container, Logo, Title, SpacingHeight, WrapperTextInfo, TextLink, SecondaryButton } from "../Login/styles";
 import logo from "../../../assets/logo.png"
-import { ButtonPrimary, TextButton } from "../../components/CustomButton/styles";
 import Input from "../../components/Input"
 import InputEye from "../../components/InputEye";
 import spacings from "../../Theme/spacings";
 import Gradient from "../../components/Gradient";
+import { Container } from './../../components/Container/index';
+import { Logo } from './../../components/Logo/index';
+import { TextLink, Title, WrapperTextInfo } from './../../components/Text/index';
+import { PrimaryButton, SecondaryButton, TextButton } from './../../components/Buttons/styles';
+import { SpacingHeight } from "../../components/SpacingHeight";
 
 const Login = ({ navigation }) => {
 
@@ -21,9 +24,9 @@ const Login = ({ navigation }) => {
                     <TextLink >Esqueceu a sua senha? Clique aqui!</TextLink>
                 </SecondaryButton>
             </WrapperTextInfo>
-            <ButtonPrimary onPress={() => { navigation.navigate("TabNavigator") }}>
+            <PrimaryButton onPress={() => { navigation.navigate("TabNavigator") }}>
                 <TextButton>Entrar</TextButton>
-            </ButtonPrimary>
+            </PrimaryButton>
             <WrapperTextInfo>
                 <SecondaryButton onPress={() => { navigation.navigate("Register") }}>
                     <TextLink>Não possui cadastro? Cadastre-se aqui.</TextLink>

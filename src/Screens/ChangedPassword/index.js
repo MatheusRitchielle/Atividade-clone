@@ -1,8 +1,11 @@
-import { Container, Logo, Title, SpacingHeight} from "../Login/styles";
 import logo from "../../../assets/logo.png"
-import { ButtonPrimary, TextButton } from "../../components/CustomButton/styles";
 import spacings from "../../Theme/spacings";
 import Gradient from "../../components/Gradient";
+import { Container } from './../../components/Container/index';
+import { Title } from './../../components/Text/index';
+import { SpacingHeight } from "../../components/SpacingHeight";
+import { PrimaryButton, TextButton } from './../../components/Buttons/styles';
+import { Logo } from './../../components/Logo/index';
 
 const ChangedPassword = ({navigation}) => {
     return (
@@ -11,9 +14,9 @@ const ChangedPassword = ({navigation}) => {
             <Logo source={logo} /> 
             <Title>Senha alterada com sucesso!</Title>
             <SpacingHeight height={spacings.extraLarge} />
-            <ButtonPrimary  onPress={() => {navigation.navigate("Login")}}>
+            <PrimaryButton  onPress={() => {navigation.navigate("Login")}}>
                 <TextButton>Login</TextButton>
-            </ButtonPrimary>
+            </PrimaryButton>
             <Gradient position='toperson'/>
         </Container>
     )

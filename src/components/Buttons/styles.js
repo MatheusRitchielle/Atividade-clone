@@ -1,7 +1,7 @@
 import colors from "../../Theme/colors";
 import styled from 'styled-components/native';
 
-export const ButtonPrimary = styled.TouchableOpacity`
+export const PrimaryButton = styled.TouchableOpacity`
     padding: 5px;
     box-sizing: border-box;
     height: 33px;
@@ -14,6 +14,15 @@ export const ButtonPrimary = styled.TouchableOpacity`
     margin-top: 20px;
     align-items: center;
     justify-content: center;
+`;
+
+export const SecondaryButton = styled.Pressable`
+  width: ${(props) => props.widthSize || "260px"};
+  margin-top: ${(props) => props.margin || "10px"};
+  font-weight: bold;
+  align-self: center;
+  align-items: ${(props) => props.text || "center"};
+  background-color: ${(props) => props.buttonColor || "none"};
 `;
 
 export const TextButton = styled.Text`

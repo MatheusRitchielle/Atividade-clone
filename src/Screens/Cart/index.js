@@ -1,9 +1,9 @@
 import React from "react";
 import { FlatList, View } from "react-native";
 import { CardGeneric, ContainerFavoritos, Shadow, Title, Column, Total } from "./styles";
-import { TextLink } from './../Login/styles';
+import { TextLink } from './../../components/Text/index';
 import Gradient from './../../components/Gradient/index';
-import { ButtonPrimary } from './../../components/CustomButton/styles';
+import { PrimaryButton } from '../../components/Buttons/styles';
 import { MaterialIcons } from '@expo/vector-icons';
 
 const Lista = [
@@ -93,12 +93,12 @@ const Cart = ({ navigation }) => {
                     </CardGeneric>
                 </Shadow>
                 <Total>
-                    <ButtonPrimary onPress={() => { navigation.navigate("InitialPage") }}>
+                    <PrimaryButton onPress={() => { navigation.navigate("InitialPage") }}>
                         <TextLink>ADICIONAR MAIS ITENS</TextLink>
-                    </ButtonPrimary>
-                    <ButtonPrimary onPress={() => { navigation.navigate("SuccessfulPurchase") }}>
+                    </PrimaryButton>
+                    <PrimaryButton onPress={() => { navigation.navigate("SuccessfulPurchase") }}>
                         <TextLink>FECHAR PEDIDO</TextLink>
-                    </ButtonPrimary>
+                    </PrimaryButton>
                 </Total>
                 <Gradient position='bottom' />
             </ContainerFavoritos>

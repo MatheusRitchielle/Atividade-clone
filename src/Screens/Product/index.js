@@ -1,10 +1,10 @@
 import React from "react";
 import { FlatList, View } from "react-native";
 import { CardGeneric, ContainerFavoritos, ContainerList, FotoEstilizada, Shadow } from "./styles";
-import { TextLink } from './../Login/styles';
 import Gradient from './../../components/Gradient/index';
 import { Feather, AntDesign, Ionicons } from '@expo/vector-icons';
-import { IconButton } from './../../components/CustomButton/styles';
+import { IconButton } from '../../components/Buttons/styles';
+import { TextLink } from './../../components/Text/index';
 
 const Lista = [
     {

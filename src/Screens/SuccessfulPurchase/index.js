@@ -1,7 +1,9 @@
 import Gradient from "../../components/Gradient";
-import { ButtonPrimary, TextButton } from "../../components/CustomButton/styles";
 import logo from "../../../assets/logo.png";
-import { Container, Logo, Title } from "../Login/styles";
+import { Title } from "../../components/Text";
+import { Logo } from './../../components/Logo/index';
+import { Container } from './../../components/Container/index';
+import { PrimaryButton, TextButton } from './../../components/Buttons/styles';
 
 const SuccessfulPurchase = ({ navigation }) => {
 
@@ -10,9 +12,9 @@ const SuccessfulPurchase = ({ navigation }) => {
             <Gradient position='top' />
             <Logo source={logo} />
             <Title>Compra efetuada com sucesso!</Title>
-            <ButtonPrimary onPress={() => {navigation.navigate("TabNavigator")}}>
+            <PrimaryButton onPress={() => {navigation.navigate("TabNavigator")}}>
                 <TextButton>Voltar</TextButton>
-            </ButtonPrimary>
+            </PrimaryButton>
             <Gradient position='bottom' />
         </Container>
     )

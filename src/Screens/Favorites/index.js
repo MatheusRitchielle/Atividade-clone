@@ -1,7 +1,7 @@
 import React from "react";
 import { FlatList, View } from "react-native";
 import { CardGeneric, ContainerFavoritos, FotoEstilizada, Shadow } from "./styles";
-import { TextLink } from './../Login/styles';
+import { TextLink } from './../../components/Text/index';
 import Gradient from './../../components/Gradient/index';
 
 const Lista = [

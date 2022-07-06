@@ -1,9 +1,8 @@
 import React from "react";
 import { Text, View } from 'react-native';
-import { Container, Avatar, Title } from "../Login/styles";
 import Gradient from "../../components/Gradient";
 import { Ionicons, AntDesign, Feather } from '@expo/vector-icons';
-import { IconButton } from './../../components/CustomButton/styles';
+import { IconButton } from '../../components/Buttons/styles';
 import AnaDoSerratec from "../../../assets/AnaDoSerratec.png";
 import Doug from "../../../assets/Doug.png";
 import Leo from "../../../assets/Leo.png";
@@ -16,6 +15,9 @@ import tec3 from "../../../assets/tec3.png";
 import { Section } from './../../components/Section/index';
 import { PrimaryCard, SecundaryCard } from "./styles";
 import { Shadow } from "../Favorites/styles";
+import { Container } from './../../components/Container/index';
+import { Avatar } from './../../components/Avatar/index';
+import { Title } from './../../components/Text/index';
 
 const InitialPage = ({ navigation }) => {
     return (
@@ -37,7 +39,7 @@ const InitialPage = ({ navigation }) => {
                     </Title>
                 </Section>
                 <Section  >
-                    <SecundaryCard source={tec2}/>
+                    <SecundaryCard source={tec2} />
                     <View>
                         <View style={{ flexDirection: "row", justifyContent: "end" }}>
                             <Feather name="trash" size={18} color="red" />
@@ -46,10 +48,10 @@ const InitialPage = ({ navigation }) => {
                             </IconButton>
                         </View>
                         <Shadow>
-                            <PrimaryCard source={tec1}/>
+                            <PrimaryCard source={tec1} />
                         </Shadow>
                     </View>
-                    <SecundaryCard source={tec3}/>
+                    <SecundaryCard source={tec3} />
                 </Section>
                 <Section>
                     <Title >Criadores</Title>

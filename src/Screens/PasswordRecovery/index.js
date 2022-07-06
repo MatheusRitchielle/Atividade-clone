@@ -1,9 +1,13 @@
-import { Container, Logo, Title, TextInfo, SpacingHeight, WrapperTextInfo } from "../Login/styles";
 import logo from "../../../assets/logo.png"
-import { ButtonPrimary, TextButton } from "../../components/CustomButton/styles";
-import Input from "../../components/Input"
+import {  TextButton } from "../../components/Buttons/styles";
 import spacings from "../../Theme/spacings";
 import Gradient from "../../components/Gradient";
+import { Container } from './../../components/Container/index';
+import { Logo } from './../../components/Logo/index';
+import { Title } from './../../components/Text/index';
+import Input from './../../components/Input/index';
+import { SpacingHeight } from './../../components/SpacingHeight/index';
+import { PrimaryButton } from './../../components/Buttons/styles';
 
 const PasswordRecovery = ({navigation}) => {
     return (
@@ -13,9 +17,9 @@ const PasswordRecovery = ({navigation}) => {
             <Title>Recuperar Senha</Title>
             <Input placeholder={"Digite seu CPF"} />
             <SpacingHeight height={spacings.extraLarge} />
-            <ButtonPrimary  onPress={() => {navigation.navigate("CreatePassword")}}>
+            <PrimaryButton  onPress={() => {navigation.navigate("CreatePassword")}}>
                 <TextButton>Recuperar</TextButton>
-            </ButtonPrimary>
+            </PrimaryButton>
             <Gradient position='toperson'/>
         </Container>
     )

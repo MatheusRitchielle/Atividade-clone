@@ -1,8 +1,9 @@
-import { Container, SpacingHeight, WrapperTextInfo, TextLink, SecondaryButton } from "../Login/styles";
-import Input from "../../components/Input"
 import spacings from "../../Theme/spacings";
-import Gradient from "../../components/Gradient";
-import { ButtonPrimary } from './../../components/CustomButton/styles';
+import { Container } from './../../components/Container/index';
+import Gradient from './../../components/Gradient/index';
+import Input from './../../components/Input/index';
+import { SpacingHeight } from './../../components/SpacingHeight/index';
+import { TextLink, WrapperTextInfo } from './../../components/Text/index';
 import { Feather } from '@expo/vector-icons';
 
 const ProductRegister = ({ navigation }) => {
@@ -17,7 +18,7 @@ const ProductRegister = ({ navigation }) => {
             <SpacingHeight height={spacings.extraLarge} />
             <Input placeholder={"Imagem"} />
             <WrapperTextInfo >
-                <SecondaryButton onClick="CallMe()" >
+                <SecondaryButton >
                     <TextLink >
                         Selecionar imagem
                         <Feather name="upload" size={18} />
@@ -25,9 +26,9 @@ const ProductRegister = ({ navigation }) => {
                 </SecondaryButton>
             </WrapperTextInfo>
             <WrapperTextInfo >
-                <ButtonPrimary onPress={() => { navigation.navigate("Product") }} >
+                <PrimaryButton onPress={() => { navigation.navigate("Product") }} >
                     <TextLink >Cadastrar</TextLink>
-                </ButtonPrimary>
+                </PrimaryButton>
             </WrapperTextInfo>
             <Gradient position='bottom' />
         </Container>

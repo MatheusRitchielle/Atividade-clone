@@ -1,8 +1,10 @@
-import { Container, SpacingHeight } from "../Login/styles";
-import { ButtonPrimary, TextButton } from "../../components/CustomButton/styles";
-import Input from "../../components/Input"
+
+import { Container } from './../../components/Container/index';
+import Gradient from './../../components/Gradient/index';
+import Input from './../../components/Input/index';
+import { SpacingHeight } from './../../components/SpacingHeight/index';
+import { PrimaryButton, TextButton } from './../../components/Buttons/styles';
 import spacings from "../../Theme/spacings";
-import Gradient from "../../components/Gradient";
 
 const Register = ({ navigation }) => {
     return (
@@ -18,9 +20,9 @@ const Register = ({ navigation }) => {
             <SpacingHeight height={spacings.extraLarge} />
             <Input placeholder={"Confirmar Senha"} />
             <SpacingHeight height={spacings.extraLarge} />
-            <ButtonPrimary onPress={() => { navigation.navigate("RegisteredUser") }}>
+            <PrimaryButton onPress={() => { navigation.navigate("RegisteredUser") }}>
                 <TextButton>Cadastrar</TextButton>
-            </ButtonPrimary>
+            </PrimaryButton>
             <Gradient position='toperson' />
         </Container>
     )

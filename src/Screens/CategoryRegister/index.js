@@ -1,9 +1,11 @@
-import { Container, SpacingHeight, WrapperTextInfo, TextLink, SecondaryButton } from "../Login/styles";
 import Input from "../../components/Input"
 import spacings from "../../Theme/spacings";
 import Gradient from "../../components/Gradient";
-import { ButtonPrimary } from './../../components/CustomButton/styles';
 import { Feather } from '@expo/vector-icons';
+import { Container } from './../../components/Container/index';
+import { SpacingHeight } from "../../components/SpacingHeight";
+import { TextLink, WrapperTextInfo } from "../../components/Text";
+import { PrimaryButton, SecondaryButton } from './../../components/Buttons/styles';
 
 const CategoryRegister = ({ navigation }) => {
     return (
@@ -21,9 +23,9 @@ const CategoryRegister = ({ navigation }) => {
                 </SecondaryButton>
             </WrapperTextInfo>
             <WrapperTextInfo >
-                <ButtonPrimary onPress={() => { navigation.navigate("InitialPage") }} >
+                <PrimaryButton onPress={() => { navigation.navigate("InitialPage") }} >
                     <TextLink >Cadastrar</TextLink>
-                </ButtonPrimary>
+                </PrimaryButton>
             </WrapperTextInfo>
             <Gradient position='bottom' />
         </Container>
