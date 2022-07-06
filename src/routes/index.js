@@ -18,8 +18,8 @@ const Routes = () => {
 
   return (
     <NavigationContainer >
-      {/* <Stack.Navigator initialRouteName="Login"> */}
-      <Stack.Navigator initialRouteName="TabNavigator">
+      <Stack.Navigator initialRouteName="Login">
+      {/* <Stack.Navigator initialRouteName="TabNavigator"> */}
         <Stack.Screen
           name="Login"
           component={Login}
