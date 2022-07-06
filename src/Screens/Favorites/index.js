@@ -34,7 +34,7 @@ const Lista = [
 
 const Item = ({ produto, preco, estoque, foto }) => (
   <Shadow>
-    <CardGeneric>
+    <CardGeneric style={{flexDirection: "row"}}>
       <FotoEstilizada
         source={{ uri: foto }}
       />
@@ -49,7 +49,7 @@ const Item = ({ produto, preco, estoque, foto }) => (
 
 const Favorites = () => {
   const itemRenderizado = ({ item }) => (
-    <Item produto={item.produto} preco={item.preco} estoque={item.estoque} />
+    <Item foto={item.foto} produto={item.produto} preco={item.preco} estoque={item.estoque} />
   );
 
   return (

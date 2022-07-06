@@ -17,7 +17,7 @@ export const ContainerFavoritos = styled.View`
 `;
 
 export const FotoEstilizada = styled.Image`
-    width: 100px;
+    width: 134px;
     height: 100px;
 `;
 

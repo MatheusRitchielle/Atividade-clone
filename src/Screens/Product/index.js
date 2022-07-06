@@ -5,7 +5,6 @@ import Gradient from './../../components/Gradient/index';
 import { Feather, AntDesign, Ionicons } from '@expo/vector-icons';
 import { IconButton } from '../../components/Buttons/styles';
 import { TextLink } from './../../components/Text/index';
-import { Section } from './../../components/Section/index';
 
 const Lista = [
     {
@@ -53,8 +52,7 @@ const Lista = [
 ];
 
 const Item = ({ produto, preco, estoque, foto, navigation }) => (
-    <>
-        <Shadow>
+        <View style={{marginRight: "10px"}}>
             <CardGeneric>
                 <FotoEstilizada
                     source={{ uri: foto }}
@@ -69,13 +67,12 @@ const Item = ({ produto, preco, estoque, foto, navigation }) => (
                     </IconButton>
                     <Feather name="trash" size={18} color="red" />
                 </View>
-        </Shadow>
-    </>
+        </View>
 );
 
 const Product = ({ navigation }) => {
     const itemRenderizado = ({ item }) => (
-        <Item produto={item.produto} preco={item.preco} estoque={item.estoque} />
+        <Item foto={item.foto} produto={item.produto} preco={item.preco} estoque={item.estoque} />
     );
 
     return (
