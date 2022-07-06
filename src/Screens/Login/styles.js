@@ -15,6 +15,14 @@ export const Logo = styled.Image`
     border-radius: 50%;
 `;
 
+export const Avatar = styled.Image`
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    border-color: #120a8f;
+    border-radius: 50%;
+`;
+
 export const Title = styled.Text`
     font-size: 18px;
     color: ${colors.secondary};
