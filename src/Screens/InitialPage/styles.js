@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const PrimaryCard = styled.View`
+export const PrimaryCard = styled.Image`
   background-color: #121;
   height: 100px;
   width: 150px;
@@ -8,7 +8,7 @@ export const PrimaryCard = styled.View`
   border-radius: 5px;
 `;
 
-export const SecundaryCard = styled.View`
+export const SecundaryCard = styled.Image`
   align-self: end;
   background-color: #555;
   height: 75px;

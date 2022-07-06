@@ -10,6 +10,9 @@ import Leo from "../../../assets/Leo.png";
 import Matheus from "../../../assets/Matheus.png";
 import Thais from "../../../assets/Thais.png";
 import Zelaum from "../../../assets/Zelaum.png";
+import tec1 from "../../../assets/tec1.png";
+import tec2 from "../../../assets/tec2.png";
+import tec3 from "../../../assets/tec3.png";
 import { Section } from './../../components/Section/index';
 import { PrimaryCard, SecundaryCard } from "./styles";
 import { Shadow } from "../Favorites/styles";
@@ -34,7 +37,7 @@ const InitialPage = ({ navigation }) => {
                     </Title>
                 </Section>
                 <Section  >
-                    <SecundaryCard></SecundaryCard>
+                    <SecundaryCard source={tec2}/>
                     <View>
                         <View style={{ flexDirection: "row", justifyContent: "end" }}>
                             <Feather name="trash" size={18} color="red" />
@@ -43,10 +46,10 @@ const InitialPage = ({ navigation }) => {
                             </IconButton>
                         </View>
                         <Shadow>
-                            <PrimaryCard></PrimaryCard>
+                            <PrimaryCard source={tec1}/>
                         </Shadow>
                     </View>
-                    <SecundaryCard></SecundaryCard>
+                    <SecundaryCard source={tec3}/>
                 </Section>
                 <Section>
                     <Title >Criadores</Title>
