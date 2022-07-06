@@ -81,8 +81,7 @@ const Product = ({ navigation }) => {
         <ContainerFavoritos>
             <Gradient position='top' />
             <ContainerList>
-                <IconButton onPress={() => { navigation.navigate("ProductRegister") }}
-                >
+                <IconButton onPress={() => { navigation.navigate("ProductRegister") }}>
                     <Ionicons name="add" size={24} color="#120a8f" />
                 </IconButton>
                 <FlatList
