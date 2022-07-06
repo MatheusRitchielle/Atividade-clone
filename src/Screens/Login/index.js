@@ -1,4 +1,4 @@
-import { Container, Logo, Title, TextInfo, SpacingHeight, WrapperTextInfo, TextLink, SecondaryButton } from "../Login/styles";
+import { Container, Logo, Title, SpacingHeight, WrapperTextInfo, TextLink, SecondaryButton } from "../Login/styles";
 import logo from "../../../assets/logo.png"
 import { ButtonPrimary, TextButton } from "../../components/CustomButton/styles";
 import Input from "../../components/Input"
@@ -17,15 +17,15 @@ const Login = ({ navigation }) => {
             <SpacingHeight height={spacings.extraLarge} />
             <InputEye placeholder={"Digite sua senha"} />
             <WrapperTextInfo >
-                <SecondaryButton onPress={() => {navigation.navigate("PasswordRecovery")}} >
+                <SecondaryButton onPress={() => { navigation.navigate("PasswordRecovery") }} >
                     <TextLink >Esqueceu a sua senha? Clique aqui!</TextLink>
                 </SecondaryButton>
             </WrapperTextInfo>
-            <ButtonPrimary onPress={() => {navigation.navigate("TabNavigator")}}>
+            <ButtonPrimary onPress={() => { navigation.navigate("TabNavigator") }}>
                 <TextButton>Entrar</TextButton>
             </ButtonPrimary>
             <WrapperTextInfo>
-                <SecondaryButton onPress={() => {navigation.navigate("Register")}}>
+                <SecondaryButton onPress={() => { navigation.navigate("Register") }}>
                     <TextLink>Não possui cadastro? Cadastre-se aqui.</TextLink>
                 </SecondaryButton>
             </WrapperTextInfo>

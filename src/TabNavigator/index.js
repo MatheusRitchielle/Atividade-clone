@@ -18,7 +18,7 @@ const TabNavigator = () => {
                     backgroundColor: "#00ffff",
                     borderTopColor: "transparent",
                 },
-                tabBarActiveTintColor: 'gray',
+                tabBarActiveTintColor: '#120a8f',
                 tabBarShowLabel: false,
             }}
         >

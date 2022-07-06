@@ -4,6 +4,7 @@ import { CardGeneric, ContainerFavoritos, ContainerList, FotoEstilizada, Shadow 
 import { TextLink } from './../Login/styles';
 import Gradient from './../../components/Gradient/index';
 import { Feather, AntDesign, Ionicons } from '@expo/vector-icons';
+import { IconButton } from './../../components/CustomButton/styles';
 
 const Lista = [
     {
@@ -50,7 +51,7 @@ const Lista = [
     }
 ];
 
-const Item = ({ produto, preco, estoque, foto }) => (
+const Item = ({ produto, preco, estoque, foto, navigation }) => (
     <>
         <Shadow>
             <CardGeneric>
@@ -63,13 +64,15 @@ const Item = ({ produto, preco, estoque, foto }) => (
             </CardGeneric>
         </Shadow>
         <View style={{ flexDirection: "row" }}>
+            <IconButton onPress={() => { navigation.navigate("ProductRegister") }}>
+                <AntDesign name="edit" size={18} color="#120a8f" />
+            </IconButton>
             <Feather name="trash" size={18} color="red" />
-            <AntDesign name="edit" size={18} color="#120a8f" />
         </View>
     </>
 );
 
-const Product = () => {
+const Product = ({ navigation }) => {
     const itemRenderizado = ({ item }) => (
         <Item produto={item.produto} preco={item.preco} estoque={item.estoque} />
     );
@@ -78,9 +81,12 @@ const Product = () => {
         <ContainerFavoritos>
             <Gradient position='top' />
             <ContainerList>
-                <Ionicons name="add" size={24} color="black" />
+                <IconButton onPress={() => { navigation.navigate("ProductRegister") }}
+                >
+                    <Ionicons name="add" size={24} color="#120a8f" />
+                </IconButton>
                 <FlatList
-                    style={{flexDirection: "column"}}
+                    style={{ flexDirection: "column" }}
                     data={Lista}
                     renderItem={itemRenderizado}
                     keyExtractor={(item) => item.id}

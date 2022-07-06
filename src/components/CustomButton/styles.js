@@ -25,3 +25,8 @@ export const TextButton = styled.Text`
     font-style: normal;
     line-height: 15px;
 `;
+
+export const IconButton = styled.Pressable`
+  width: "10x";
+  padding-right: 5px;
+`;

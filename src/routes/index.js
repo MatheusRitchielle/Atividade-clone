@@ -9,6 +9,7 @@ import RegisteredUser from "../Screens/RegisteredUser";
 import Register from "../Screens/Register";
 import TabNavigator from '../TabNavigator/index';
 import SuccessfulPurchase from "../Screens/SuccessfulPurchase";
+import ProductRegister from "../Screens/ProductRegister";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,7 +18,7 @@ const Routes = () => {
   return (
     <NavigationContainer >
       <Stack.Navigator initialRouteName="Login">
-      {/* <Stack.Navigator initialRouteName="TabNavigator"> */}
+        {/* <Stack.Navigator initialRouteName="TabNavigator"> */}
         <Stack.Screen
           name="Login"
           component={Login}
@@ -29,6 +30,7 @@ const Routes = () => {
           name="PasswordRecovery"
           component={PasswordRecovery}
           options={{
+            headerTransparent: true,
             title: false
           }}
         />
@@ -78,6 +80,15 @@ const Routes = () => {
             headerTransparent: true,
             title: false,
             headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="ProductRegister"
+          component={ProductRegister}
+          options={{
+            headerTransparent: true,
+            headerTitleAlign: "center",
+            title: "Cadastro de Produto"
           }}
         />
       </Stack.Navigator>
