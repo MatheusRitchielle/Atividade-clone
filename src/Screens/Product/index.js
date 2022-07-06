@@ -5,6 +5,7 @@ import Gradient from './../../components/Gradient/index';
 import { Feather, AntDesign, Ionicons } from '@expo/vector-icons';
 import { IconButton } from '../../components/Buttons/styles';
 import { TextLink } from './../../components/Text/index';
+import { Section } from './../../components/Section/index';
 
 const Lista = [
     {
@@ -62,13 +63,13 @@ const Item = ({ produto, preco, estoque, foto, navigation }) => (
                 <TextLink>Preço R$ {preco}</TextLink>
                 <TextLink>{estoque} unidades em estoque</TextLink>
             </CardGeneric>
+                <View style={{ flexDirection: "row" }}>
+                    <IconButton onPress={() => { navigation.navigate("ProductRegister") }}>
+                        <AntDesign name="edit" size={18} color="#120a8f" />
+                    </IconButton>
+                    <Feather name="trash" size={18} color="red" />
+                </View>
         </Shadow>
-        <View style={{ flexDirection: "row" }}>
-            <IconButton onPress={() => { navigation.navigate("ProductRegister") }}>
-                <AntDesign name="edit" size={18} color="#120a8f" />
-            </IconButton>
-            <Feather name="trash" size={18} color="red" />
-        </View>
     </>
 );
 
@@ -89,7 +90,7 @@ const Product = ({ navigation }) => {
                     data={Lista}
                     renderItem={itemRenderizado}
                     keyExtractor={(item) => item.id}
-                //numColumns={2}
+                    numColumns={2}
                 />
             </ContainerList>
             <Gradient position='bottom' />

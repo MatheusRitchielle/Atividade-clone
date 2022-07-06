@@ -20,6 +20,7 @@ const TabNavigator = () => {
                 },
                 tabBarActiveTintColor: '#120a8f',
                 tabBarShowLabel: false,
+                
             }}
         >
             <Tab.Screen

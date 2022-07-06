@@ -11,6 +11,8 @@ import TabNavigator from '../TabNavigator/index';
 import SuccessfulPurchase from "../Screens/SuccessfulPurchase";
 import ProductRegister from "../Screens/ProductRegister";
 import CategoryRegister from './../Screens/CategoryRegister/index';
+import { SmallLogo } from "../components/Logo";
+import logo from "../../assets/logo.png";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,12 +21,12 @@ const Routes = () => {
   return (
     <NavigationContainer >
       <Stack.Navigator initialRouteName="Login">
-      {/* <Stack.Navigator initialRouteName="TabNavigator"> */}
+        {/* <Stack.Navigator initialRouteName="TabNavigator"> */}
         <Stack.Screen
           name="Login"
           component={Login}
           options={{
-            headerShown: false
+            headerShown: false,
           }}
         />
         <Stack.Screen
@@ -32,7 +34,7 @@ const Routes = () => {
           component={PasswordRecovery}
           options={{
             headerTransparent: true,
-            title: false
+            title: false,
           }}
         />
         <Stack.Screen
@@ -54,7 +56,7 @@ const Routes = () => {
           name="RegisteredUser"
           component={RegisteredUser}
           options={{
-            headerShown: false
+            headerShown: false,
           }}
         />
         <Stack.Screen
@@ -63,7 +65,9 @@ const Routes = () => {
           options={{
             headerTransparent: true,
             title: "Cadastro",
-            headerTitleAlign: "center"
+            headerTitleAlign: "center",
+            headerRight: () => <SmallLogo source={logo} />,
+
           }}
         />
         <Stack.Screen
@@ -71,7 +75,8 @@ const Routes = () => {
           component={TabNavigator}
           options={{
             headerTransparent: true,
-            title: false
+            title: false,
+            headerRight: () => <SmallLogo source={logo} />
           }}
         />
         <Stack.Screen

@@ -1,10 +1,11 @@
 import React from "react";
 import { FlatList, View } from "react-native";
-import { CardGeneric, ContainerFavoritos, Shadow, Title, Column, Total } from "./styles";
+import { ContainerFavoritos, Shadow, Title, Column, Total } from "./styles";
 import { TextLink } from './../../components/Text/index';
 import Gradient from './../../components/Gradient/index';
 import { PrimaryButton } from '../../components/Buttons/styles';
 import { MaterialIcons } from '@expo/vector-icons';
+import { CardGeneric } from './../../components/Cards/styles';
 
 const Lista = [
     {

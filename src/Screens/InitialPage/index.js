@@ -14,10 +14,10 @@ import tec2 from "../../../assets/tec2.png";
 import tec3 from "../../../assets/tec3.png";
 import { Section } from './../../components/Section/index';
 import { PrimaryCard, SecundaryCard } from "./styles";
-import { Shadow } from "../Favorites/styles";
 import { Container } from './../../components/Container/index';
 import { Avatar } from './../../components/Avatar/index';
 import { Title } from './../../components/Text/index';
+import { Shadow } from "../../components/Shadow/styles";
 
 const InitialPage = ({ navigation }) => {
     return (
@@ -54,7 +54,7 @@ const InitialPage = ({ navigation }) => {
                     <SecundaryCard source={tec3} />
                 </Section>
                 <Section>
-                    <Title >Criadores</Title>
+                    <Title>Criadores</Title>
                 </Section>
                 <Section>
                     <Avatar source={AnaDoSerratec} />

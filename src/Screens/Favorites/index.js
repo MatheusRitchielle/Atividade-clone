@@ -1,8 +1,12 @@
 import React from "react";
 import { FlatList, View } from "react-native";
-import { CardGeneric, ContainerFavoritos, FotoEstilizada, Shadow } from "./styles";
+import { FotoEstilizada } from "./styles";
 import { TextLink } from './../../components/Text/index';
 import Gradient from './../../components/Gradient/index';
+import { Container } from "../../components/Container";
+import { Section } from './../../components/Section/index';
+import { Shadow } from './../../components/Shadow/styles';
+import { CardGeneric } from './../../components/Cards/styles';
 
 const Lista = [
   {
@@ -49,17 +53,17 @@ const Favorites = () => {
   );
 
   return (
-    <>
-      <ContainerFavoritos>
-        <Gradient position='top' />
+    <Container>
+      <Gradient position='top' />
+      <Section>
         <FlatList
           data={Lista}
           renderItem={itemRenderizado}
           keyExtractor={(item) => item.id}
         />
-        <Gradient position='bottom' />
-      </ContainerFavoritos>
-    </>
+      </Section>
+      <Gradient position='bottom' />
+    </Container>
   );
 };
 

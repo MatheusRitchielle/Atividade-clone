@@ -12,7 +12,7 @@ const SuccessfulPurchase = ({ navigation }) => {
             <Gradient position='top' />
             <Logo source={logo} />
             <Title>Compra efetuada com sucesso!</Title>
-            <PrimaryButton onPress={() => {navigation.navigate("TabNavigator")}}>
+            <PrimaryButton onPress={() => {navigation.navigate("InitialPage")}}>
                 <TextButton>Voltar</TextButton>
             </PrimaryButton>
             <Gradient position='bottom' />
