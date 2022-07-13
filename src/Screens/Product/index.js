@@ -62,7 +62,7 @@ const Item = ({ produto, preco, estoque, foto, navigation }) => (
                 <TextLink>{estoque} unidades em estoque</TextLink>
             </CardGeneric>
                 <View style={{ flexDirection: "row" }}>
-                    <IconButton onPress={() => { navigation.navigate("ProductRegister") }}>
+                    <IconButton onUserPress={() => { navigation.navigate("ProductRegister") }}>
                         <AntDesign name="edit" size={18} color="#120a8f" />
                     </IconButton>
                     <Feather name="trash" size={18} color="red" />
@@ -79,7 +79,7 @@ const Product = ({ navigation }) => {
         <ContainerFavoritos>
             <Gradient position='top' />
             <ContainerList>
-                <IconButton onPress={() => { navigation.navigate("ProductRegister") }}>
+                <IconButton onUserPress={() => { navigation.navigate("ProductRegister") }}>
                     <Ionicons name="add" size={24} color="#120a8f" />
                 </IconButton>
                 <FlatList

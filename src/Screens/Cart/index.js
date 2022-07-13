@@ -85,11 +85,11 @@ const Cart = ({ navigation }) => {
                         />
                         <Total >
                             <TextLink>Total da compra</TextLink>
-                            <TextLink>R$</TextLink>
+                            <TextLink>R$190,00</TextLink>
                         </Total>
                         <Total >
                             <TextLink>Data da compra</TextLink>
-                            <TextLink>today.toLocaleDateString();</TextLink>
+                            <TextLink>07/07/2022</TextLink>
                         </Total>
                     </CardGeneric>
                 </Shadow>
